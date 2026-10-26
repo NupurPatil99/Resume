@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1220">
@@ -13,9 +14,55 @@
     @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.profile-card{max-width:520px}.grid3{grid-template-columns:repeat(2,1fr)}.skill-list{grid-template-columns:repeat(2,1fr)}.timeline-wide{grid-template-columns:repeat(2,1fr)}.navlinks{gap:13px}.section-head{align-items:start;flex-direction:column;gap:10px}}
     @media(max-width:640px){.wrap{width:min(100% - 28px,1160px)}.navin{height:64px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:63px;left:0;right:0;padding:16px 22px 20px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.navlinks a{padding:5px 0}.hero{padding:54px 0 35px}.lede{font-size:15px}.stats{grid-template-columns:repeat(2,1fr)}.grid3,.skill-list,.projects,.timeline,.edu-grid,.code-layout{grid-template-columns:1fr}.project-image{height:190px}.section{padding:43px 0}.section-head{margin-bottom:20px}.timeline-wide{grid-template-columns:1fr 1fr}.contact-box{grid-template-columns:1fr;padding:24px}.contact-actions{flex-direction:row;flex-wrap:wrap}.search{width:100%}.project-tools{width:100%}.upload-label input{max-width:120px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+
+/* ===== Enhancement layer ===== */
+body{font-family:"Plus Jakarta Sans",Inter,system-ui,sans-serif}
+h1,.section h2,.contact-box h2{font-family:"Space Grotesk","Plus Jakarta Sans",sans-serif}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--gold));z-index:60}
+.section,.hero{position:relative;isolation:isolate}
+.section>.wrap,.hero>.wrap{position:relative;z-index:1}
+.bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+/* hero: grid + drifting glow + floating tech chips */
+.bg-hero{background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/56px 56px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 56px;-webkit-mask:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%);mask:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%)}
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.38;animation:drift 14s ease-in-out infinite alternate}
+.glow.a{width:420px;height:420px;background:var(--accent2);top:-120px;right:8%}
+.glow.b{width:320px;height:320px;background:var(--accent);bottom:-140px;left:4%;animation-delay:-6s}
+@keyframes drift{to{transform:translate(50px,36px) scale(1.12)}}
+.chip{position:absolute;font:600 11px "Space Grotesk",monospace;color:var(--accent);border:1px solid var(--line);background:color-mix(in srgb,var(--panel) 80%,transparent);padding:6px 10px;border-radius:9px;animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-14px)}}
+.caret{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.profile-card{transition:transform .15s;transform-style:preserve-3d}
+/* section backdrops (inline SVG) */
+.bg-skills{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='2' cy='2' r='1.3' fill='%2386a8ff' fill-opacity='.32'/%3E%3C/svg%3E");-webkit-mask:linear-gradient(#000,transparent 85%);mask:linear-gradient(#000,transparent 85%)}
+.bg-projects{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='%2383e2c1' stroke-opacity='.2'%3E%3Cpath d='M0 60h40l20-20h60M60 120V80l20-20'/%3E%3Ccircle cx='60' cy='40' r='3' fill='%2383e2c1' fill-opacity='.35'/%3E%3C/svg%3E");-webkit-mask:linear-gradient(transparent,#000 30%,transparent);mask:linear-gradient(transparent,#000 30%,transparent)}
+.bg-exp::before{content:"";position:absolute;left:0;right:0;bottom:0;height:340px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'%3E%3Cpath d='M0 300V190l120-90 100 70 140-130 150 150 110-80 160 120 130-100 140 110 150-90V300z' fill='%2386a8ff' fill-opacity='.12'/%3E%3Cpath d='M0 300V240l160-70 130 60 170-100 180 120 150-60 200 90 210-60V300z' fill='%2383e2c1' fill-opacity='.14'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+.bg-contact{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400' fill='none' stroke='%2386a8ff' stroke-opacity='.22'%3E%3Cellipse cx='400' cy='200' rx='80' ry='40'/%3E%3Cellipse cx='400' cy='200' rx='160' ry='84'/%3E%3Cellipse cx='400' cy='200' rx='250' ry='130'/%3E%3Cellipse cx='400' cy='200' rx='350' ry='180'/%3E%3Cellipse cx='400' cy='200' rx='450' ry='240'/%3E%3C/svg%3E") center/cover}
+/* career journey */
+.journey{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:6px 0 34px;padding-top:34px}
+.journey:before,.journey:after{content:"";position:absolute;top:13px;left:10%;height:3px;border-radius:3px}
+.journey:before{right:10%;background:var(--line)}
+.journey:after{width:calc(var(--p,0)*80%);background:linear-gradient(90deg,var(--accent),var(--accent2),var(--gold));box-shadow:0 0 14px var(--accent)}
+.ms{text-align:center;position:relative;opacity:.35;transition:opacity .5s}
+.ms.on{opacity:1}
+.ms i{position:absolute;top:-30px;left:50%;width:15px;height:15px;margin-left:-8px;border-radius:50%;background:var(--bg);border:3px solid var(--line);transition:.4s}
+.ms.on i{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 18%,transparent)}
+.ms b{display:block;font:700 20px "Space Grotesk";letter-spacing:-.03em}
+.ms span{font-size:11px;color:var(--muted);line-height:1.4;display:block}
+.trail{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.5}
+.trail path{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:8 8;vector-effect:non-scaling-stroke}
+/* interactions */
+.card,.stat,.skill{position:relative;overflow:hidden}
+.card:after,.stat:after,.skill:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%)}
+.card:hover:after,.stat:hover:after,.skill:hover:after{opacity:1}
+.skill-bar span{transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.job li{transition:color .2s}.job:hover li{color:var(--text)}
+.stat strong{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:640px){.journey{grid-template-columns:repeat(2,1fr);row-gap:30px}.journey:before,.journey:after{display:none}.ms i{position:static;display:block;margin:0 auto 8px}.chip{display:none}}
   </style>
 </head>
 <body>
+<div id="progress"></div>
 <header class="nav">
   <div class="wrap navin">
     <a class="brand" href="#home" aria-label="Nupur Patil home"><span class="monogram">NP</span><span>Nupur Patil<span style="color:var(--accent)">.</span></span></a>
@@ -28,9 +75,11 @@
 
 <main id="home">
   <section class="hero">
+  <div class="bg bg-hero"><span class="glow a"></span><span class="glow b"></span></div>
+  <div class="bg" style="z-index:0"><span class="chip" style="top:12%;left:46%">&lt;UI5/&gt;</span><span class="chip" style="top:62%;left:50%;animation-delay:-2s">OData V4</span><span class="chip" style="top:84%;left:30%;animation-delay:-4s">@UI.lineItem</span><span class="chip" style="top:20%;right:3%;animation-delay:-3s">BTP ☁</span></div>
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow"><span class="dot"></span> SAP Fiori · UI5 · BTP</div>
+        <div class="eyebrow"><span class="dot"></span> <span id="typed">SAP Fiori</span><span class="caret"></span></div>
         <h1>Building SAP experiences that make <span class="gradient">complex work feel simple.</span></h1>
         <p class="lede">I'm Nupur Patil, an SAP Fiori/UI5 Developer working across enterprise SAP applications, S/4HANA integration, CDS-driven experiences and SAP BTP delivery. I enjoy turning business requirements into reliable, intuitive applications—and continuously growing toward end-to-end cloud solution delivery.</p>
         <div class="hero-cta">
@@ -54,8 +103,8 @@
     <div class="wrap">
       <div class="section-head"><div><div class="kicker">At a glance</div><h2>Technology with business context.</h2></div><p class="section-intro">A practical blend of frontend engineering, SAP integration, stakeholder collaboration and continuous improvement.</p></div>
       <div class="stats reveal">
-        <div class="stat"><strong>~4 years</strong><span>SAP Fiori/UI5 experience*</span></div>
-        <div class="stat"><strong>3</strong><span>Enterprise consulting / delivery environments</span></div>
+        <div class="stat"><strong>~<b data-count="4">0</b> years</strong><span>SAP Fiori/UI5 experience*</span></div>
+        <div class="stat"><strong><b data-count="3">0</b></strong><span>Enterprise consulting / delivery environments</span></div>
         <div class="stat"><strong>UI + API</strong><span>Frontend and SAP service integration</span></div>
         <div class="stat"><strong>Build → Support</strong><span>Development, debugging and delivery lifecycle</span></div>
       </div>
@@ -77,7 +126,7 @@
     </div>
   </section>
 
-  <section class="section" id="skills">
+  <section class="section" id="skills"><div class="bg bg-skills"></div>
     <div class="wrap">
       <div class="section-head"><div><div class="kicker">Technical profile</div><h2>Skills, with context.</h2></div><p class="section-intro">Filter the stack by area. The bars are visual emphasis—not certified proficiency scores.</p></div>
       <div class="skills-toolbar" id="skillFilters">
@@ -101,7 +150,7 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
+  <section class="section" id="projects"><div class="bg bg-projects"></div>
     <div class="wrap">
       <div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects & applications.</h2></div><div class="project-tools"><input id="projectSearch" class="search" type="search" placeholder="Search projects…" aria-label="Search projects"><button class="filter active" data-project-filter="all">All</button><button class="filter" data-project-filter="ui5">UI5</button><button class="filter" data-project-filter="btp">BTP</button></div></div>
       <div class="projects" id="projectGrid">
@@ -126,9 +175,16 @@
     </div>
   </section>
 
-  <section class="section" id="experience">
+  <section class="section bg-exp" id="experience"><svg class="trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path id="trailPath" d="M2 98C20 80 10 60 40 52S90 48 70 28 98 8 98 2"/></svg>
     <div class="wrap">
       <div class="section-head"><div><div class="kicker">Career journey</div><h2>Experience & delivery.</h2></div><p class="section-intro">A career built around enterprise SAP development, application delivery and collaboration.</p></div>
+      <div class="journey" id="journey" aria-label="Career milestones">
+        <div class="ms"><i></i><b>2014</b><span>Diploma, Mechanical Engineering</span></div>
+        <div class="ms"><i></i><b>2017</b><span>B.E., Mechanical Engineering</span></div>
+        <div class="ms"><i></i><b>2022</b><span>Infosys · SAPUI5 &amp; OData</span></div>
+        <div class="ms"><i></i><b>2025</b><span>Capgemini · led a team of six</span></div>
+        <div class="ms"><i></i><b>Dec 2025</b><span>Scott Sports · Fiori on S/4HANA</span></div>
+      </div>
       <div class="timeline">
         <article class="card job reveal"><div class="job-head"><div><h3>SAP Fiori Developer</h3><div class="company">Scott Sports India</div></div><span class="date">Dec 2025 – Present</span></div><ul><li>Develop custom Fiori apps and enhance standard S/4HANA On-Premise applications using SAPUI5, CDS, OData and ABAP-backed services.</li><li>Build Fiori Elements List Report and Analytical List Page experiences using CDS annotations.</li><li>Collaborate across S/4HANA, EWM and SAP Gateway; troubleshoot defects and contribute to deployment and transport activities.</li><li>Contribute to a stocklist application proof of concept and related technical improvements.</li></ul></article>
         <article class="card job reveal"><div class="job-head"><div><h3>Consultant</h3><div class="company">Capgemini</div></div><span class="date">Mar 2025 – Dec 2025</span></div><ul><li>Led a team of six in SAP Fiori/UI5 application delivery using the RICEFW model.</li><li>Configured SAP Build Work Zone spaces, pages and role-based access.</li><li>Extended standard Fiori apps with Adaptation Projects and tested OData services through SAP Gateway.</li><li>Supported feasibility checks, transports and alignment with Fiori/BTP extension practices.</li></ul></article>
@@ -195,7 +251,7 @@ define view entity ZI_StocklistItem
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="section" id="contact"><div class="bg bg-contact"></div>
     <div class="wrap">
       <div class="contact-box reveal">
         <div><div class="kicker">Let's build something useful</div><h2>Have an SAP challenge in mind?</h2><p>I'm interested in opportunities where SAP Fiori, enterprise integration and cloud application development meet real business needs. Reach out to discuss roles, projects or technical collaboration.</p><div class="tags"><span class="tag">English</span><span class="tag">Marathi</span><span class="tag">Hindi</span></div></div>
@@ -302,6 +358,36 @@ define view entity ZI_StocklistItem
     cap:'CAP + Destination Integration (planned learning project)\\n\\nStatus: placeholder for a future portfolio demonstration. Do not present this as completed experience until the service is built, deployed and tested.\\n\\nSuggested scope: CAP Node.js service, CDS model, destination-based API call, XSUAA authorization, tests and Cloud Foundry deployment.'
   };
   $$('[data-details]').forEach(btn=>btn.addEventListener('click',()=>alert(projectDetails[btn.dataset.details])));
+
+  // ===== Enhancement scripts =====
+  const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prog=$('#progress'),jr=$('#journey'),tp=$('#trailPath');
+  const tl=tp.getTotalLength();
+  function onScroll(){
+    const h=document.documentElement,max=h.scrollHeight-innerHeight;
+    prog.style.width=(scrollY/max*100)+'%';
+    const r=jr.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.8-r.top)/(innerHeight*.5)));
+    jr.style.setProperty('--p',p);
+    $$('.ms',jr).forEach((m,i)=>m.classList.toggle('on',p>=i/4-.01));
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  // typed role line
+  const words=['SAP Fiori','UI5 Developer','CDS & OData','BTP Builder'];let wi=0,ci=0,del=false;const ty=$('#typed');
+  (function tick(){const w=words[wi];ty.textContent=w.slice(0,ci+=del?-1:1);let d=del?45:90;
+    if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;wi=(wi+1)%words.length;d=300}
+    if(!calm)setTimeout(tick,d);else ty.textContent=words[0]})();
+  // count-up + skill bar fill when visible
+  $$('.skill-bar span').forEach(b=>{b.dataset.w=b.style.width;b.style.width=0});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const t=e.target;
+    if(t.dataset.count){const n=+t.dataset.count;let k=0;const iv=setInterval(()=>{t.textContent=++k;if(k>=n)clearInterval(iv)},calm?1:260)}
+    else{const b=t.querySelector('.skill-bar span');setTimeout(()=>b.style.width=b.dataset.w,120)}}),{threshold:.4});
+  $$('[data-count],.skill').forEach(el=>io.observe(el));
+  // re-run bar fill after filtering
+  $$('#skillFilters .filter').forEach(f=>f.addEventListener('click',()=>setTimeout(()=>$$('.skill-bar span').forEach(b=>b.style.width=b.dataset.w),50)));
+  // card spotlight + profile tilt
+  document.addEventListener('pointermove',e=>{const c=e.target.closest?.('.card,.stat,.skill');if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')});
+  const pc=$('.profile-card');
+  if(!calm&&matchMedia('(hover:hover)').matches){pc.addEventListener('pointermove',e=>{const r=pc.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;pc.style.transform=`perspective(800px) rotateY(${x*9}deg) rotateX(${-y*9}deg)`});pc.addEventListener('pointerleave',()=>pc.style.transform='')}
 </script>
 </body>
 </html>
