@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Nupur Patil — SAP Fiori/UI5 Developer focused on SAP BTP, S/4HANA integration, CDS, OData and enterprise application delivery.">
+  <title>Nupur Patil | SAP Fiori · UI5 · BTP</title>
+  <style>
+    :root{--bg:#0a1020;--panel:#111a2c;--panel2:#152138;--text:#edf3ff;--muted:#a7b5cc;--line:rgba(181,203,239,.16);--accent:#83e2c1;--accent2:#86a8ff;--gold:#f2c879;--shadow:0 24px 80px rgba(0,0,0,.28);--radius:22px}
+    [data-theme="light"]{--bg:#f4f7fb;--panel:#fff;--panel2:#edf3fa;--text:#14213a;--muted:#586980;--line:rgba(31,56,91,.15);--accent:#087e68;--accent2:#355bd6;--gold:#9b6814;--shadow:0 24px 70px rgba(33,56,88,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(79,115,205,.14),transparent 36%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;transition:background .25s,color .25s}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em}.monogram{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#081323;font-size:14px;font-weight:900}.navlinks{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--text)}.nav-actions{display:flex;gap:8px}.iconbtn,.menu-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:9px 11px}.menu-btn{display:none}.hero{padding:80px 0 58px;position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 12px;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 15%,transparent)}h1{font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.065em;margin:23px 0 20px;max-width:760px}h1 .gradient{background:linear-gradient(100deg,var(--accent),#a6c4ff 60%,#e7c9ff);color:transparent;background-clip:text}.lede{max-width:680px;color:var(--muted);font-size:17px;line-height:1.8}.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:13px;border:1px solid var(--line);font-size:13px;font-weight:750;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--accent);color:#081323;border-color:transparent}.btn-secondary{background:var(--panel);color:var(--text)}.hero-note{font-size:12px;color:var(--muted);margin-top:18px}.profile-card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:28px;padding:23px;box-shadow:var(--shadow);position:relative}.profile-top{display:flex;justify-content:space-between;align-items:center}.profile-label{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.orb{width:52px;height:52px;border-radius:18px;background:linear-gradient(140deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#081323;font-weight:900;font-size:18px}.profile-title{font-size:25px;line-height:1.2;font-weight:800;letter-spacing:-.04em;margin:24px 0 8px}.profile-sub{color:var(--muted);font-size:13px}.mini-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:19px}.pill{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;color:var(--muted);background:color-mix(in srgb,var(--panel) 60%,transparent)}.profile-foot{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px;margin-top:22px;font-size:12px;color:var(--muted)}.section{padding:60px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:27px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);font-weight:800}.section h2{font-size:clamp(28px,4vw,42px);line-height:1.12;letter-spacing:-.05em;margin:8px 0 0}.section-intro{max-width:480px;color:var(--muted);font-size:14px;margin:0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.stat strong{display:block;font-size:25px;letter-spacing:-.04em}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:4px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .22s,border-color .22s;min-width:0}.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 48%,var(--line))}.card-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:var(--panel2);color:var(--accent);font-size:20px;margin-bottom:17px}.card h3{font-size:16px;margin:0 0 8px;letter-spacing:-.02em}.card p{font-size:13px;color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}.tag{border-radius:7px;background:var(--panel2);padding:5px 8px;color:var(--muted);font-size:10px}.skills-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.filter{background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:12px}.filter.active{background:var(--accent);color:#081323;border-color:transparent;font-weight:800}.skill-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.skill{padding:17px;border:1px solid var(--line);background:var(--panel);border-radius:15px}.skill-top{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:750}.skill small{color:var(--muted);font-size:10px}.skill-bar{height:5px;background:var(--panel2);border-radius:9px;margin-top:12px;overflow:hidden}.skill-bar span{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--accent),var(--accent2))}.caution{font-size:11px;color:var(--muted);margin-top:14px}.project-tools{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.search{min-width:210px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-size:12px}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.project{overflow:hidden;padding:0}.project-image{height:210px;background:linear-gradient(135deg,var(--panel2),color-mix(in srgb,var(--accent2) 14%,var(--panel)));border-bottom:1px solid var(--line);position:relative;display:grid;place-items:center;overflow:hidden}.project-image img{width:100%;height:100%;object-fit:cover;display:block}.placeholder-art{width:80%;height:70%;border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));border-radius:15px;background:color-mix(in srgb,var(--bg) 50%,transparent);padding:17px;transform:rotate(-2deg);box-shadow:var(--shadow)}.fakebar{display:flex;gap:5px;margin-bottom:16px}.fakebar i{width:6px;height:6px;border-radius:50%;background:var(--accent)}.fake-line{height:7px;border-radius:9px;background:var(--line);margin:9px 0;width:78%}.fake-line.short{width:45%}.fake-table{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:17px}.fake-table span{height:22px;background:color-mix(in srgb,var(--accent2) 20%,var(--panel));border-radius:4px}.project-label{position:absolute;left:14px;top:14px;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:6px 9px;border-radius:8px;font-size:10px}.project-body{padding:21px}.project-meta{display:flex;justify-content:space-between;gap:12px;color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.project h3{font-size:20px;letter-spacing:-.03em;margin:10px 0 8px}.project p{color:var(--muted);font-size:13px;margin:0}.project-foot{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:17px}.textbtn{border:0;background:none;color:var(--accent);padding:0;font-weight:800;font-size:12px}.upload-label{display:inline-flex;gap:6px;align-items:center;color:var(--muted);font-size:11px;cursor:pointer}.upload-label input{max-width:145px;font-size:10px}.upload-note{color:var(--muted);font-size:11px;margin-top:13px}.timeline{display:grid;grid-template-columns:1fr 1fr;gap:15px}.job{position:relative;padding:22px 22px 22px 25px}.job:before{content:"";position:absolute;left:0;top:23px;bottom:23px;width:3px;background:linear-gradient(var(--accent),var(--accent2));border-radius:5px}.job-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.job h3{font-size:16px;margin:0}.job .company{font-size:12px;color:var(--accent);margin-top:3px}.job .date{font-size:11px;color:var(--muted)}.job ul{padding-left:17px;margin:14px 0 0;color:var(--muted);font-size:12px}.job li{margin:7px 0}.code-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:18px;align-items:start}.code-tabs{display:grid;gap:8px}.code-tab{border:1px solid var(--line);background:var(--panel);color:var(--muted);text-align:left;padding:14px;border-radius:13px}.code-tab strong{display:block;color:var(--text);font-size:12px}.code-tab span{font-size:10px}.code-tab.active{border-color:var(--accent);background:var(--panel2)}.codebox{border:1px solid var(--line);border-radius:18px;background:#080d18;overflow:hidden}.codebar{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;background:#111a2b;border-bottom:1px solid rgba(255,255,255,.09);color:#a7b5cc;font-size:11px}.copy{border:1px solid rgba(255,255,255,.15);background:transparent;color:#eaf0ff;border-radius:8px;padding:6px 9px;font-size:10px}.codebox pre{margin:0;padding:20px;overflow:auto;max-height:430px;color:#d6e2f8;font-size:12px;line-height:1.75;tab-size:2}.code-caption{padding:0 20px 18px;color:#9eacc4;font-size:11px}.timeline-wide{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.phase{border-top:2px solid var(--accent);padding:17px 15px;background:var(--panel);border-radius:0 0 14px 14px}.phase .num{font-size:10px;color:var(--accent);font-weight:900;letter-spacing:.12em}.phase h3{font-size:14px;margin:7px 0}.phase p{font-size:12px;color:var(--muted);margin:0}.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.edu{display:flex;gap:14px;align-items:flex-start}.edu-icon{width:40px;height:40px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;background:var(--panel2);color:var(--accent)}.edu h3{font-size:14px;margin:0}.edu p{font-size:12px;color:var(--muted);margin:4px 0 0}.contact-box{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;padding:32px;background:linear-gradient(120deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:26px}.contact-box h2{margin:0;font-size:clamp(28px,4vw,42px);letter-spacing:-.05em}.contact-box p{color:var(--muted);max-width:600px;font-size:13px}.contact-actions{display:flex;flex-direction:column;gap:9px}.footer{padding:30px 0 40px;color:var(--muted);font-size:11px}.footerin{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:var(--accent);color:#081323;padding:10px 16px;border-radius:11px;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.2s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}.hidden{display:none!important}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.profile-card{max-width:520px}.grid3{grid-template-columns:repeat(2,1fr)}.skill-list{grid-template-columns:repeat(2,1fr)}.timeline-wide{grid-template-columns:repeat(2,1fr)}.navlinks{gap:13px}.section-head{align-items:start;flex-direction:column;gap:10px}}
+    @media(max-width:640px){.wrap{width:min(100% - 28px,1160px)}.navin{height:64px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:63px;left:0;right:0;padding:16px 22px 20px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.navlinks a{padding:5px 0}.hero{padding:54px 0 35px}.lede{font-size:15px}.stats{grid-template-columns:repeat(2,1fr)}.grid3,.skill-list,.projects,.timeline,.edu-grid,.code-layout{grid-template-columns:1fr}.project-image{height:190px}.section{padding:43px 0}.section-head{margin-bottom:20px}.timeline-wide{grid-template-columns:1fr 1fr}.contact-box{grid-template-columns:1fr;padding:24px}.contact-actions{flex-direction:row;flex-wrap:wrap}.search{width:100%}.project-tools{width:100%}.upload-label input{max-width:120px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="#home" aria-label="Nupur Patil home"><span class="monogram">NP</span><span>Nupur Patil<span style="color:var(--accent)">.</span></span></a>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#cds-lab">CDS Lab</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions"><button class="iconbtn" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark theme">◐</button><button class="menu-btn" id="menuToggle" aria-label="Open navigation">☰</button></div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> SAP Fiori · UI5 · BTP</div>
+        <h1>Building SAP experiences that make <span class="gradient">complex work feel simple.</span></h1>
+        <p class="lede">I'm Nupur Patil, an SAP Fiori/UI5 Developer working across enterprise SAP applications, S/4HANA integration, CDS-driven experiences and SAP BTP delivery. I enjoy turning business requirements into reliable, intuitive applications—and continuously growing toward end-to-end cloud solution delivery.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">Explore my work <span>↘</span></a>
+          <a class="btn btn-secondary" href="#contact">Let's connect <span>↗</span></a>
+          <a class="btn btn-secondary" href="mailto:nupurpatil697@gmail.com?subject=SAP%20BTP%20Opportunity">Email me</a>
+        </div>
+        <p class="hero-note">Panvel · Navi Mumbai, India &nbsp; / &nbsp; SAP Fiori/UI5 Developer</p>
+      </div>
+      <aside class="profile-card">
+        <div class="profile-top"><span class="profile-label">Developer snapshot</span><span class="orb">NP</span></div>
+        <div class="profile-title">SAP Fiori / UI5<br>Developer</div>
+        <div class="profile-sub">Enterprise UX · SAP integration · BTP ecosystem</div>
+        <div class="mini-stack"><span class="pill">SAPUI5</span><span class="pill">Fiori Elements</span><span class="pill">OData</span><span class="pill">CDS Views</span><span class="pill">S/4HANA</span><span class="pill">BAS</span><span class="pill">Work Zone</span><span class="pill">Cloud Foundry</span></div>
+        <div class="profile-foot"><span>Delivery mindset</span><span>Business-first engineering ↗</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">At a glance</div><h2>Technology with business context.</h2></div><p class="section-intro">A practical blend of frontend engineering, SAP integration, stakeholder collaboration and continuous improvement.</p></div>
+      <div class="stats reveal">
+        <div class="stat"><strong>~4 years</strong><span>SAP Fiori/UI5 experience*</span></div>
+        <div class="stat"><strong>3</strong><span>Enterprise consulting / delivery environments</span></div>
+        <div class="stat"><strong>UI + API</strong><span>Frontend and SAP service integration</span></div>
+        <div class="stat"><strong>Build → Support</strong><span>Development, debugging and delivery lifecycle</span></div>
+      </div>
+      <p class="caution">*Experience duration is approximate and should be updated to the exact application date. Keep only project counts and responsibilities you can substantiate in an interview.</p>
+    </div>
+  </section>
+
+  <section class="section" id="strengths">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">What I bring</div><h2>My engineering toolkit.</h2></div><p class="section-intro">A recruiter-friendly overview of the capabilities most relevant to SAP Fiori and SAP BTP consulting.</p></div>
+      <div class="grid3">
+        <article class="card reveal"><div class="card-icon">◈</div><h3>Fiori & UI5 engineering</h3><p>Responsive Freestyle SAPUI5 apps, custom controllers, fragments, extensions and Fiori Elements experiences aligned to business workflows.</p><div class="tags"><span class="tag">Freestyle UI5</span><span class="tag">List Report</span><span class="tag">Analytical List Page</span></div></article>
+        <article class="card reveal"><div class="card-icon">⌘</div><h3>SAP data & integration</h3><p>Consume OData services, work with SAP Gateway and collaborate on CDS/ABAP-backed application behavior across SAP landscapes.</p><div class="tags"><span class="tag">OData V2/V4 exposure</span><span class="tag">CDS</span><span class="tag">S/4HANA</span></div></article>
+        <article class="card reveal"><div class="card-icon">☁</div><h3>BTP delivery ecosystem</h3><p>Experience with BAS, SAP Build Work Zone and BTP-related deployment activities, with continued focus on cloud-native implementation.</p><div class="tags"><span class="tag">BAS</span><span class="tag">Work Zone</span><span class="tag">Cloud Foundry exposure</span></div></article>
+        <article class="card reveal"><div class="card-icon">⌕</div><h3>Debugging & performance</h3><p>Investigate UI, service and backend issues; work with functional and technical teams to resolve defects and improve reliability.</p><div class="tags"><span class="tag">DevTools</span><span class="tag">Gateway</span><span class="tag">Root-cause analysis</span></div></article>
+        <article class="card reveal"><div class="card-icon">▤</div><h3>Technical documentation</h3><p>Translate clarified requirements into implementation details, sprint documentation and support-ready technical handover.</p><div class="tags"><span class="tag">Specifications</span><span class="tag">Agile</span><span class="tag">Transport coordination</span></div></article>
+        <article class="card reveal"><div class="card-icon">◎</div><h3>Team collaboration</h3><p>Coordinate delivery with developers and stakeholders, support Agile ceremonies and help teams stay aligned to delivery goals.</p><div class="tags"><span class="tag">Mentoring / coordination</span><span class="tag">Jira</span><span class="tag">Git</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Technical profile</div><h2>Skills, with context.</h2></div><p class="section-intro">Filter the stack by area. The bars are visual emphasis—not certified proficiency scores.</p></div>
+      <div class="skills-toolbar" id="skillFilters">
+        <button class="filter active" data-filter="all">All skills</button><button class="filter" data-filter="ux">SAP UX</button><button class="filter" data-filter="integration">Integration</button><button class="filter" data-filter="btp">BTP</button><button class="filter" data-filter="engineering">Engineering</button>
+      </div>
+      <div class="skill-list" id="skillList">
+        <div class="skill" data-category="ux"><div class="skill-top"><span>SAPUI5 / JavaScript</span><small>Core experience</small></div><div class="skill-bar"><span style="width:92%"></span></div></div>
+        <div class="skill" data-category="ux"><div class="skill-top"><span>Fiori Elements</span><small>Hands-on</small></div><div class="skill-bar"><span style="width:82%"></span></div></div>
+        <div class="skill" data-category="ux"><div class="skill-top"><span>HTML5 / CSS3</span><small>Hands-on</small></div><div class="skill-bar"><span style="width:84%"></span></div></div>
+        <div class="skill" data-category="integration"><div class="skill-top"><span>OData / SAP Gateway</span><small>Hands-on</small></div><div class="skill-bar"><span style="width:82%"></span></div></div>
+        <div class="skill" data-category="integration"><div class="skill-top"><span>CDS Views / Annotations</span><small>Hands-on exposure</small></div><div class="skill-bar"><span style="width:73%"></span></div></div>
+        <div class="skill" data-category="integration"><div class="skill-top"><span>S/4HANA / EWM</span><small>Project exposure</small></div><div class="skill-bar"><span style="width:70%"></span></div></div>
+        <div class="skill" data-category="btp"><div class="skill-top"><span>BAS / Work Zone</span><small>Hands-on</small></div><div class="skill-bar"><span style="width:77%"></span></div></div>
+        <div class="skill" data-category="btp"><div class="skill-top"><span>Cloud Foundry / MTA</span><small>Validate depth</small></div><div class="skill-bar"><span style="width:48%"></span></div></div>
+        <div class="skill" data-category="btp"><div class="skill-top"><span>CAP / XSUAA / HANA Cloud</span><small>Learning / exposure</small></div><div class="skill-bar"><span style="width:35%"></span></div></div>
+        <div class="skill" data-category="engineering"><div class="skill-top"><span>Debugging / issue resolution</span><small>Hands-on</small></div><div class="skill-bar"><span style="width:80%"></span></div></div>
+        <div class="skill" data-category="engineering"><div class="skill-top"><span>Technical documentation</span><small>Project experience</small></div><div class="skill-bar"><span style="width:78%"></span></div></div>
+        <div class="skill" data-category="engineering"><div class="skill-top"><span>Git / Agile / Jira</span><small>Project experience</small></div><div class="skill-bar"><span style="width:76%"></span></div></div>
+      </div>
+      <p class="caution">Please edit these labels and visual bars to reflect your real current level. Do not list CAP, OAuth/XSUAA, MTA or HANA Cloud as production experience unless you have hands-on examples.</p>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects & applications.</h2></div><div class="project-tools"><input id="projectSearch" class="search" type="search" placeholder="Search projects…" aria-label="Search projects"><button class="filter active" data-project-filter="all">All</button><button class="filter" data-project-filter="ui5">UI5</button><button class="filter" data-project-filter="btp">BTP</button></div></div>
+      <div class="projects" id="projectGrid">
+        <article class="card project reveal" data-type="ui5" data-search="stocklist scott sports s4hana cds odata pdf reporting">
+          <div class="project-image" id="image-stocklist"><span class="project-label">SAPUI5 · S/4HANA</span><div class="placeholder-art"><div class="fakebar"><i></i><i></i><i></i></div><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-table"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div>
+          <div class="project-body"><div class="project-meta"><span>Proof of concept</span><span>01 / 03</span></div><h3>Stocklist Fiori Application</h3><p>Custom stocklist experience intended to improve on static report workflows, with catalog-driven data, dynamic tables and PDF output. Update this summary to clearly separate completed features from planned enhancements.</p><div class="tags"><span class="tag">SAPUI5</span><span class="tag">OData V4</span><span class="tag">CDS/RAP</span><span class="tag">PDF generation</span></div><div class="project-foot"><label class="upload-label">＋ Preview screenshot <input type="file" accept="image/*" data-preview="stocklist" aria-label="Upload stocklist screenshot"></label><button class="textbtn" data-details="stocklist">Project details ↗</button></div></div>
+        </article>
+        <article class="card project reveal" data-type="ui5" data-search="fiori elements list report analytical list page cds annotations reporting">
+          <div class="project-image" id="image-analytics"><span class="project-label">Fiori Elements · CDS</span><div class="placeholder-art"><div class="fakebar"><i></i><i></i><i></i></div><div style="display:flex;gap:9px;margin-top:18px"><div style="flex:1;height:62px;border-radius:8px;background:color-mix(in srgb,var(--accent) 20%,var(--panel))"></div><div style="flex:1;height:62px;border-radius:8px;background:color-mix(in srgb,var(--accent2) 22%,var(--panel))"></div><div style="flex:1;height:62px;border-radius:8px;background:color-mix(in srgb,var(--gold) 20%,var(--panel))"></div></div><div class="fake-line"></div><div class="fake-line short"></div></div></div>
+          <div class="project-body"><div class="project-meta"><span>Enterprise reporting</span><span>02 / 03</span></div><h3>Fiori Elements Reporting</h3><p>List Report and Analytical List Page development using CDS annotations and analytical views. Add a sanitized screenshot, the business problem and a measurable result.</p><div class="tags"><span class="tag">List Report</span><span class="tag">ALP</span><span class="tag">CDS annotations</span></div><div class="project-foot"><label class="upload-label">＋ Preview screenshot <input type="file" accept="image/*" data-preview="analytics" aria-label="Upload Fiori Elements screenshot"></label><button class="textbtn" data-details="analytics">Project details ↗</button></div></div>
+        </article>
+        <article class="card project reveal" data-type="btp" data-search="sap build work zone spaces pages roles deployment custom applications">
+          <div class="project-image" id="image-workzone"><span class="project-label">SAP BTP · Work Zone</span><div class="placeholder-art"><div class="fakebar"><i></i><i></i><i></i></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:15px"><span style="height:45px;border-radius:7px;background:color-mix(in srgb,var(--accent) 20%,var(--panel))"></span><span style="height:45px;border-radius:7px;background:color-mix(in srgb,var(--accent2) 20%,var(--panel))"></span><span style="height:45px;border-radius:7px;background:color-mix(in srgb,var(--gold) 20%,var(--panel))"></span></div><div class="fake-line"></div><div class="fake-line short"></div></div></div>
+          <div class="project-body"><div class="project-meta"><span>Launchpad experience</span><span>03 / 03</span></div><h3>Work Zone Application Delivery</h3><p>Configuration and delivery support for custom application access through SAP Build Work Zone, including spaces, pages and role-based access.</p><div class="tags"><span class="tag">Work Zone</span><span class="tag">Roles</span><span class="tag">BTP</span></div><div class="project-foot"><label class="upload-label">＋ Preview screenshot <input type="file" accept="image/*" data-preview="workzone" aria-label="Upload Work Zone screenshot"></label><button class="textbtn" data-details="workzone">Project details ↗</button></div></div>
+        </article>
+        <article class="card project reveal" data-type="btp" data-search="cap node js btp cloud foundry learning project future">
+          <div class="project-image" id="image-cap"><span class="project-label">BTP · Learning build</span><div class="placeholder-art"><div class="fakebar"><i></i><i></i><i></i></div><div class="fake-line"></div><div class="fake-line short"></div><div style="display:flex;gap:7px;margin-top:18px"><span style="height:28px;flex:1;border-radius:6px;background:color-mix(in srgb,var(--accent) 20%,var(--panel))"></span><span style="height:28px;flex:1;border-radius:6px;background:color-mix(in srgb,var(--accent2) 20%,var(--panel))"></span></div></div></div>
+          <div class="project-body"><div class="project-meta"><span>Optional portfolio project</span><span>04 / 04</span></div><h3>CAP + Destination Integration</h3><p>Reserved slot for a future CAP Node.js demonstration integrating an external API or S/4HANA sandbox through a destination. Replace this card after implementation.</p><div class="tags"><span class="tag">CAP Node.js</span><span class="tag">Destination</span><span class="tag">Cloud Foundry</span></div><div class="project-foot"><label class="upload-label">＋ Preview screenshot <input type="file" accept="image/*" data-preview="cap" aria-label="Upload CAP project screenshot"></label><button class="textbtn" data-details="cap">Project details ↗</button></div></div>
+        </article>
+      </div>
+      <p class="upload-note">Screenshot previews are local to your current browser session. To publish screenshots permanently, place approved image files in <code>assets/projects/</code> and update the project image path in <code>index.html</code>. Never upload confidential employer/client data, internal URLs, customer information or credentials.</p>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Career journey</div><h2>Experience & delivery.</h2></div><p class="section-intro">A career built around enterprise SAP development, application delivery and collaboration.</p></div>
+      <div class="timeline">
+        <article class="card job reveal"><div class="job-head"><div><h3>SAP Fiori Developer</h3><div class="company">Scott Sports India</div></div><span class="date">Dec 2025 – Present</span></div><ul><li>Develop custom Fiori apps and enhance standard S/4HANA On-Premise applications using SAPUI5, CDS, OData and ABAP-backed services.</li><li>Build Fiori Elements List Report and Analytical List Page experiences using CDS annotations.</li><li>Collaborate across S/4HANA, EWM and SAP Gateway; troubleshoot defects and contribute to deployment and transport activities.</li><li>Contribute to a stocklist application proof of concept and related technical improvements.</li></ul></article>
+        <article class="card job reveal"><div class="job-head"><div><h3>Consultant</h3><div class="company">Capgemini</div></div><span class="date">Mar 2025 – Dec 2025</span></div><ul><li>Led a team of six in SAP Fiori/UI5 application delivery using the RICEFW model.</li><li>Configured SAP Build Work Zone spaces, pages and role-based access.</li><li>Extended standard Fiori apps with Adaptation Projects and tested OData services through SAP Gateway.</li><li>Supported feasibility checks, transports and alignment with Fiori/BTP extension practices.</li></ul></article>
+        <article class="card job reveal"><div class="job-head"><div><h3>Senior Systems Engineer</h3><div class="company">Infosys Ltd</div></div><span class="date">Apr 2024 – Feb 2025</span></div><ul><li>Continued SAP application development and maintenance across enterprise delivery work.</li><li>Supported requirements, issue resolution, documentation and cross-team coordination.</li></ul></article>
+        <article class="card job reveal"><div class="job-head"><div><h3>Systems Engineer</h3><div class="company">Infosys Ltd</div></div><span class="date">Mar 2022 – Mar 2024</span></div><ul><li>Worked on Airbus MYQSP1, MYCSL and UNC SAPUI5 applications.</li><li>Developed responsive applications and consumed OData services to display backend data.</li><li>Created custom controllers, prepared sprint technical specifications and used Jira, VersionOne and GitHub.</li><li>Contributed to Agile delivery and identification of technical and integration risks.</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cds-lab">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Technical showcase</div><h2>CDS annotation lab.</h2></div><p class="section-intro">Small, readable examples that show how CDS annotations influence Fiori experiences. These are illustrative patterns—not copied from a live customer system.</p></div>
+      <div class="code-layout">
+        <div class="code-tabs" id="codeTabs">
+          <button class="code-tab active" data-code="ui"><strong>01 · UI annotations</strong><span>Line items and filter fields</span></button>
+          <button class="code-tab" data-code="cube"><strong>02 · Analytical cube</strong><span>Measures and aggregation</span></button>
+          <button class="code-tab" data-code="auth"><strong>03 · Authorization</strong><span>Access-control intent</span></button>
+          <button class="code-tab" data-code="valuehelp"><strong>04 · Value help</strong><span>Searchable value help pattern</span></button>
+        </div>
+        <div class="codebox">
+          <div class="codebar"><span id="codeTitle">ABAP CDS · UI annotations</span><button class="copy" id="copyCode">Copy code</button></div>
+          <pre><code id="codeContent">@EndUserText.label: 'Stocklist Items'
+define view entity ZI_StocklistItem
+  as select from zstocklist_item
+{
+  key material as Material,
+
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  @UI.selectionField: [{ position: 10 }]
+  material,
+
+  @UI.lineItem: [{ position: 20 }]
+  plant,
+
+  @UI.lineItem: [{ position: 30 }]
+  season
+}</code></pre>
+          <div class="code-caption" id="codeCaption">Use UI.lineItem to define table columns and UI.selectionField to expose fields in a filter bar. Adjust syntax and data sources for your ABAP release and application model.</div>
+        </div>
+      </div>
+      <p class="caution">The examples below are learning snippets. Verify syntax against your ABAP release and model type before using them. Authorization annotations alone do not implement row-level access control; validate DCL roles and application authorization behavior as well.</p>
+      <div class="card" style="margin-top:18px">
+        <h3>Reference shelf</h3>
+        <p>Official SAP documentation used to ground the examples and continue learning:</p>
+        <div class="tags">
+          <a class="tag" href="https://help.sap.com/docs/ABAP_PLATFORM_NEW/cc0c305d2fab47bd808adcad3ca7ee9d/f8af07bb0770414bb38a25cae29a12e9.html" target="_blank" rel="noreferrer">SAP UI Annotations ↗</a>
+          <a class="tag" href="https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/7bfbd6206f884c2d9c5b05670533f180.html" target="_blank" rel="noreferrer">Field importance ↗</a>
+          <a class="tag" href="https://help.sap.com/docs/ABAP_PLATFORM_NEW/68b9c2480c274cdcb8ef74297f302564/cec73073e65d4a66b6910545dd319af7.html" target="_blank" rel="noreferrer">Analytical dimensions ↗</a>
+          <a class="tag" href="https://cap.cloud.sap/docs/" target="_blank" rel="noreferrer">CAP documentation ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Education & credentials</div><h2>Foundation and continuous learning.</h2></div></div>
+      <div class="edu-grid">
+        <div class="card edu reveal"><div class="edu-icon">⌂</div><div><h3>B.E. — Mechanical Engineering</h3><p>Saraswati College of Engineering, Kharghar · 2017–2020</p></div></div>
+        <div class="card edu reveal"><div class="edu-icon">⌂</div><div><h3>Diploma — Mechanical Engineering</h3><p>Bharati Vidyapeeth Institute of Technology, Kharghar · 2014–2017</p></div></div>
+        <div class="card edu reveal"><div class="edu-icon">✓</div><div><h3>Infosys Certified SAP Fiori Consultant</h3><p>Professional certification</p></div></div>
+        <div class="card edu reveal"><div class="edu-icon">⌘</div><div><h3>Additional training</h3><p>SAP ABAP · Java Essentials · SQL · Global Agile Developer · Business Communication Level 5</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <div><div class="kicker">Let's build something useful</div><h2>Have an SAP challenge in mind?</h2><p>I'm interested in opportunities where SAP Fiori, enterprise integration and cloud application development meet real business needs. Reach out to discuss roles, projects or technical collaboration.</p><div class="tags"><span class="tag">English</span><span class="tag">Marathi</span><span class="tag">Hindi</span></div></div>
+        <div class="contact-actions"><a class="btn btn-primary" href="mailto:nupurpatil697@gmail.com?subject=SAP%20Fiori%20%2F%20BTP%20Opportunity">✉ Email Nupur</a><a class="btn btn-secondary" href="tel:+918976680751">☎ 89766 80751</a><button class="btn btn-secondary" id="copyEmail">Copy email address</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="wrap footerin"><span>© <span id="year"></span> Nupur Patil · SAP Fiori / UI5</span><span>Built as a lightweight static portfolio · GitHub Pages ready</span><a href="#home">Back to top ↑</a></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  const $ = (s, root=document) => root.querySelector(s);
+  const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+  $('#year').textContent = new Date().getFullYear();
+
+  // Theme preference (stored locally in this browser only)
+  const savedTheme = localStorage.getItem('nupur-portfolio-theme');
+  if(savedTheme) document.documentElement.dataset.theme = savedTheme;
+  $('#themeToggle').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('nupur-portfolio-theme', next);
+  });
+
+  $('#menuToggle').addEventListener('click', () => $('#navlinks').classList.toggle('open'));
+  $$('#navlinks a').forEach(a => a.addEventListener('click', () => $('#navlinks').classList.remove('open')));
+
+  // Scroll reveal
+  if('IntersectionObserver' in window){
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+    }), {threshold:.08});
+    $$('.reveal').forEach(el => observer.observe(el));
+  } else $$('.reveal').forEach(el => el.classList.add('visible'));
+
+  // Skill filters
+  $$('#skillFilters .filter').forEach(btn => btn.addEventListener('click', () => {
+    $$('#skillFilters .filter').forEach(b => b.classList.remove('active')); btn.classList.add('active');
+    const f = btn.dataset.filter;
+    $$('#skillList .skill').forEach(card => card.classList.toggle('hidden', f !== 'all' && card.dataset.category !== f));
+  }));
+
+  // Project filters + search
+  let projectType = 'all';
+  function filterProjects(){
+    const q = $('#projectSearch').value.trim().toLowerCase();
+    $$('#projectGrid .project').forEach(card => {
+      const matchType = projectType === 'all' || card.dataset.type === projectType;
+      const matchText = !q || (card.dataset.search + ' ' + card.innerText).toLowerCase().includes(q);
+      card.classList.toggle('hidden', !(matchType && matchText));
+    });
+  }
+  $$('#projects [data-project-filter]').forEach(btn => btn.addEventListener('click', () => {
+    $$('#projects [data-project-filter]').forEach(b => b.classList.remove('active'));btn.classList.add('active');
+    projectType = btn.dataset.projectFilter;filterProjects();
+  }));
+  $('#projectSearch').addEventListener('input', filterProjects);
+
+  // Temporary screenshot preview. For permanent GitHub Pages images, add files to assets/projects and edit the HTML.
+  $$('input[data-preview]').forEach(input => input.addEventListener('change', e => {
+    const file = e.target.files && e.target.files[0]; if(!file) return;
+    if(!file.type.startsWith('image/')) { notify('Please choose an image file.'); return; }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const target = $('#image-' + input.dataset.preview);
+      target.querySelector('.placeholder-art')?.remove();
+      let img = target.querySelector('img');
+      if(!img){img=document.createElement('img');img.alt='User-provided project screenshot preview';target.appendChild(img)}
+      img.src = reader.result;notify('Screenshot preview added in this browser session.');
+    };
+    reader.readAsDataURL(file);
+  }));
+
+  // CDS snippet switcher
+  const snippets = {
+    ui:{title:'ABAP CDS · UI annotations',caption:'Use UI.lineItem to define table columns and UI.selectionField to expose fields in a filter bar. Adjust syntax and data sources for your ABAP release and application model.',code:`@EndUserText.label: 'Stocklist Items'\ndefine view entity ZI_StocklistItem\n  as select from zstocklist_item\n{\n  key material as Material,\n\n  @UI.lineItem: [{ position: 10, importance: #HIGH }]\n  @UI.selectionField: [{ position: 10 }]\n  material,\n\n  @UI.lineItem: [{ position: 20 }]\n  plant,\n\n  @UI.lineItem: [{ position: 30 }]\n  season\n}`},
+    cube:{title:'ABAP CDS · Analytical cube pattern',caption:'Illustrative analytical modeling pattern. Use a valid quantity/currency unit reference for measures, confirm aggregation semantics, and adapt to your source tables and release.',code:`@EndUserText.label: 'Stocklist Quantity Cube'\n@Analytics.dataCategory: #CUBE\n@AccessControl.authorizationCheck: #CHECK\ndefine view entity ZI_StocklistCube\n  as select from zstocklist_item\n{\n  key material as Material,\n  key plant    as Plant,\n\n  @DefaultAggregation: #SUM\n  @Semantics.quantity.unitOfMeasure: 'BaseUnit'\n  stock_quantity as StockQuantity,\n\n  @Semantics.unitOfMeasure: true\n  base_unit as BaseUnit\n}`},
+    auth:{title:'ABAP CDS · Authorization intent',caption:'The annotation signals that access control should be checked. Actual row-level restrictions are defined with an appropriate DCL role and must be tested with real user authorizations.',code:`@EndUserText.label: 'Authorized Stocklist'\n@AccessControl.authorizationCheck: #CHECK\ndefine view entity ZI_AuthorizedStocklist\n  as select from zstocklist_item\n{\n  key material as Material,\n      plant    as Plant,\n      season   as Season\n}\n\n// Example DCL concept (adapt to your role design):\n// DEFINE ROLE ZR_STOCKLIST_PLANT {\n//   GRANT SELECT ON ZI_AuthorizedStocklist\n//   WHERE Plant = aspect pfcg_auth( ... );\n// }`},
+    valuehelp:{title:'ABAP CDS · Value-help concept',caption:'Value-help annotations vary by use case and release. A production value help commonly combines a dedicated value-help entity with consumption annotations on the consuming field.',code:`@EndUserText.label: 'Plant Value Help'\n@ObjectModel.dataCategory: #VALUE_HELP\n@Search.searchable: true\ndefine view entity ZI_PlantValueHelp\n  as select from zplant\n{\n  @Search.defaultSearchElement: true\n  key plant as Plant,\n\n  @Search.defaultSearchElement: true\n  plant_name as PlantName\n}\n\n// On a consuming entity, consider:\n// @Consumption.valueHelpDefinition: [{\n//   entity: { name: 'ZI_PlantValueHelp',\n//             element: 'Plant' }\n// }]\n// plant as Plant`}
+  };
+  let currentSnippet = 'ui';
+  $$('#codeTabs .code-tab').forEach(btn => btn.addEventListener('click', () => {
+    $$('#codeTabs .code-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    currentSnippet=btn.dataset.code;$('#codeTitle').textContent=snippets[currentSnippet].title;
+    $('#codeContent').textContent=snippets[currentSnippet].code;$('#codeCaption').textContent=snippets[currentSnippet].caption;
+  }));
+
+  async function copyText(value){
+    try{await navigator.clipboard.writeText(value);notify('Copied to clipboard.')}
+    catch(e){const ta=document.createElement('textarea');ta.value=value;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();notify('Copied to clipboard.')}
+  }
+  $('#copyCode').addEventListener('click',()=>copyText(snippets[currentSnippet].code));
+  $('#copyEmail').addEventListener('click',()=>copyText('nupurpatil697@gmail.com'));
+
+  function notify(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>t.classList.remove('show'),2400)}
+
+  // Replace these prompts with project-specific writeups when ready.
+  const projectDetails = {
+    stocklist:'Stocklist Fiori Application\\n\\nProblem: static report workflows can limit interactivity and freshness.\\nRole: SAPUI5 development and integration contribution.\\nTechnologies: SAPUI5, OData V4, CDS/RAP exposure, PDF generation.\\n\\nBefore publishing: add your exact contribution, status, architecture and verified outcome. Remove confidential information.',
+    analytics:'Fiori Elements Reporting\\n\\nScope: List Report / Analytical List Page using CDS annotations and analytical CDS views.\\n\\nBefore publishing: add the business use case, key annotations, your role, and a measurable impact if you have one.',
+    workzone:'SAP Build Work Zone Application Delivery\\n\\nScope: spaces, pages, role-based access and custom application delivery.\\n\\nBefore publishing: clarify which configuration and deployment steps you personally performed.',
+    cap:'CAP + Destination Integration (planned learning project)\\n\\nStatus: placeholder for a future portfolio demonstration. Do not present this as completed experience until the service is built, deployed and tested.\\n\\nSuggested scope: CAP Node.js service, CDS model, destination-based API call, XSUAA authorization, tests and Cloud Foundry deployment.'
+  };
+  $$('[data-details]').forEach(btn=>btn.addEventListener('click',()=>alert(projectDetails[btn.dataset.details])));
+</script>
+</body>
+</html>
